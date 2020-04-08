@@ -15,6 +15,7 @@ class PropertiesController < ApplicationController
   # GET /properties/new
   def new
     @property = Property.new
+    2.times{@property.nearest_stations.build} #登録画面で最寄り駅フォームを2つ表示
     @submit = '登録する' #送信ボタン
   end
 
@@ -71,6 +72,6 @@ class PropertiesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def property_params
-      params.require(:property).permit(:property_name, :rental_price, :address, :age, :note)
+      params.require(:property).permit(:property_name, :rental_price, :address, :age, :note, nearest_stations_attributes: [:line_name, :station_name, :distance_on_foot, :property_id])
     end
 end
