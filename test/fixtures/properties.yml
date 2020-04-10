@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  property_name: MyText
+  rental-price: 1
+  address: MyText
+  age: 1
+  note: MyText
+
+two:
+  property_name: MyText
+  rental-price: 1
+  address: MyText
+  age: 1
+  note: MyText
